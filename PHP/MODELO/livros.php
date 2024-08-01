@@ -2,65 +2,69 @@
     namespace php\modelo;
 
     class Livros{
-        public Bolean validar(int $login)
-        {
-            if($login == 0)
-            {
-                return false;~
-            }
-            else 
-            {   
-                return true;
-            }
+        private string $livro1;
+        private string $livro2;
+        private string $livro3;
+        private string $livro4;
+        private string $livro5;
+        private string $livro6;
+        private string $livro7;
+
+        public function __construct (string $livro1, string $livro2, string $livro3, string $livro4, string $livro5, string $livro6, string $livro7){
+            $this->livro1 = $livro1;
+            $this->livro2 = $livro2;
+            $this->livro3 = $livro3;
+            $this->livro4 = $livro4;
+            $this->livro5 = $livro5;
+            $this->livro6 = $livro6;
+            $this->livro7 = $livro7;
         }
 
-        public int harryPotterEaPedraFilosofal()
+        public function getLivro1():string
         {
-            return 150;
+            return $this->livro1;
         }
 
-        public int harryPotterEaCameraSecreta()
+        public function getLivro2():string
         {
-            return 184;
+            return $this->livro2;
         }
 
-        public int harryPotterEoPrisoneiroDeAskaban()
+        public function getLivro3():string
         {
-            return 152;
+            return $this->livro3;
         }
 
-        public int harryPotterEoCaliceDeFogo()
+        public function getLivro4():string
         {
-            return 125;
+            return $this->livro4;
         }
 
-        public int harryPotterEaOrdemDaFenix()
+        public function getLivro5():string
         {
-            return 144;
+            return $this->livro5;
         }
 
-        publix int harryPotterEoEnigmaDoPrincipe()
+        public function getLivro6():string
         {
-            return 154;
+            return $this->livro6;
         }
 
-        public int harryPotterEaReliquiaDaMorte()
+        public function getLivro7():string
         {
-            return 245;
+            return $this->livro7;
         }
 
-
-        public function 
-
-
-
-
-
-
-
-
-
-
-
-
+        public function livros()
+        {
+            return "<br> Estoque dos Livros;".
+                   "<br>Harry Potter e a Pedra Filosofal: ".$this->getLivro1().
+                   "<br>Harry Potter e a Câmara Secreta: ".$this->getLivro2().
+                   "<br>Harry Potter e o Prisioneiro de Azkaban: ".$this->getLivro3().
+                   "<br>Harry Potter e o Cálice de Fogo: ".$this->getLivro4().
+                   "<br>Harry Potter e a Ordem da Fenix: ".$this->getLivro5().
+                   "<br>Harry Potter e o Enigma Prícipe: ".$this->getLivro6().
+                   "<br>Harry Potter e as Reliquias da Morte: ".$this->getLivro7();
+        }
     }
+?>

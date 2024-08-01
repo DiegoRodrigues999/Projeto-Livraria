@@ -1,11 +1,15 @@
 <?php
     namespace php\modelo;//Definir o local do projeto 
-    include 'usuario.php';
+    include 'cadastrar.php';
+    include 'livros.php';
 
-    $usuario = new Usuario("Diego", "Rua tekomo nakama","119945454","22/10/2004","diegoro@email.com","*******");//intenciando
+    $cadastrar = new Usuario("Diego", "Rua tekomo nakama","119945454","22/10/2004","diegoro@email.com","*******");//instanciação 
 
-    echo $usuario -> login();
+    $livro1 = new Livros("655", "454", "545", "455", "452", "554", "545");
+
+    echo $cadastrar -> login();
     echo "<br>";
-    echo $usuario -> cadastro();
-                                                                                        
+    echo $cadastrar -> cadastro();
+    echo "<br>";
+    echo $livro1 -> livros();                                                                           
 ?>

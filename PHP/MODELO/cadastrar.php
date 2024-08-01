@@ -9,22 +9,18 @@
     private string $login;
     private string $senha;
 
-    public function __construct(string $nome, 
-                                string $endereco, 
-                                string $telefone, string $dataDeNascimento, 
-                                string $login, 
-                                string $senha){
-        this->nome = $nome;
-        this->endereco = $endereco;
-        this->telefone = $telefone;
-        this->dataDeNascimento = $dataDeNascimento;
-        this->login = $login;
-        this->senha = $senha;
+    public function __construct(string $nome, string $endereco, string $telefone, string $dataDeNascimento, string $login, string $senha){
+        $this->nome = $nome;
+        $this->endereco = $endereco;
+        $this->telefone = $telefone;
+        $this->dataDeNascimento = $dataDeNascimento;
+        $this->login = $login;
+        $this->senha = $senha;
             
     }//fim do construct
 
     public function getNome():string{
-        return $this-> nome;
+        return $this->nome;
     }
 
     public function getEndereco():string{
@@ -49,43 +45,43 @@
 
 
     public function setNome(string $nome):void{
-        this->nome = $nome;
+        $this->nome = $nome;
     }
 
     public function setEndereco(string $endereco):void{
-        return $this->endereco = $endereco;
+         $this->endereco = $endereco;
     }
 
     public function setTelefone(string $telefone):void{
-        return $this->telefone = $telefone;
+         $this->telefone = $telefone;
     }
 
     public function setDataDeNascimento(string $dataDeNascimento):void{
-        return $this->dataDeNascimento = $dataDeNascimento;
+         $this->dataDeNascimento = $dataDeNascimento;
     }
 
     public function setLogin(string $login):void{
-        return $this->login = $login;
+         $this->login = $login;
     }
         
     public function setSenha(string $senha):void{
-        return $this->senha = $senha; 
+         $this->senha = $senha; 
     }
     
-    public function imprimir():string
+    public function cadastro():string
     {
         return "<br> Nome: ". $this->getNome().
                 "<br> endereço: ". $this->getEndereco().
                 "<br> telefone: ". $this->getTelefone().
                 "<br> Data De Nascimento: ". $this->getDataDeNascimento().
-                "<br> login". $this->getLogin().
-                "<br> senha". $this->getSenha();
+                "<br> login: ". $this->getLogin().
+                "<br> senha: ". $this->getSenha();
     }
 
     public function login():string{
         return "<br> faça seu Login <br>".
-               "<br> Email".$this->getLogin().
-               "<br> Senha".$this->getSenha().
+               "<br> Email: ".$this->getLogin().
+               "<br> Senha: ".$this->getSenha();
     }
 
     public function catalogo():int{
